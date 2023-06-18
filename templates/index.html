@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Meme Analysis </title>
+        <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+            font-family: 'Roboto', sans-serif;
+        
+        }
+        .container
+        {
+            background-color:plum;
+            background-image: url('pngtree-rainbow-frame-background-aesthetic-blank-image_1320851.jpg');
+            padding-left: 8%;
+            padding-right: 8%;
+            box-sizing: border-box;
+        } 
+        
+        .navbar
+        {
+            height:12%;
+            display:flex;
+            align-items: center;
+         
+        }
+        
+        .logo
+        {
+            background-color: deeppink;
+            width:50px;
+            cursor: pointer;
+        }
+        
+        nav{
+            flex:1;
+            text-align: right ;
+        }
+        
+        nav ul li 
+        {
+            list-style: none;
+            display:inline-block;
+            margin-left: 60px;
+            text-align: right;
+            color: #fff;
+            font-size: 13px;
+        }
+        
+        .row{
+            display:flex;
+            height: 88%;
+            align-items: center;
+        }
+        
+        .col{
+            flex-basis: 50%;
+        }
+        
+        h1{
+            color:rgb(1, 17, 17);
+            font-size: 50px;
+        }
+        
+        p{
+            color: antiquewhite;
+            font-size: 11px;
+            line-height: 15px;
+        }
+        
+        button{
+            width:180px;
+            color:black;
+            font-size: 12px;
+            padding: 12px 0;
+            background: #fff;
+            border: 0;
+            border-radius:20px;
+            outline: 0ch;
+            margin-top: 30px;
+        }
+        
+        .card{
+            width:200px;
+            height:230px;
+            display:inline-block;
+            border-radius: 10px;
+            padding:15px 25px;
+            box-sizing:border-box;
+            cursor:pointer;
+            margin: 10px 15px;
+            
+            background-position: center;
+            background-size: cover;
+            transition:  transform 0.5s;
+        
+        }
+        
+        .card1
+        {
+            background-color: rgb(49, 169, 190);
+            background-image: url(images/image_63.png);
+        }
+        .card2
+        {
+            background-color: rgb(209, 90, 193);
+            background-image: url(images/image_17.jpg);
+        }
+        .card3
+        {
+            background-color: rgb(245, 227, 128);
+            background-image: url(images/image_30.jpg);
+        }
+        .card4
+        {
+            background-color: rgb(139, 237, 191);
+            background-image: url(images/image_56.jpg);
+        }
+        
+        .card:hover{
+            transform: translateY(-10px);
+        }
+      </style>
+   
+
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+     
+            <div class="navbar">
+                <img src="images/logo.png" class="logo">
+                <nav>
+                    <ul>
+                        <li>Fatima Asim</li>
+                        <li>20i-0847</li>
+                        <li>Project</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1>Meme Analysis</h1>
+                    <p>Upload an image of a meme.</p>
+                    <form action="/", method="post" enctype="multipart/form-data">
+                        <input class="file-upload-input" name='i' type="file" required="required">
+                        <input class="btn btn-primary at-3", type="submit", value="Predict image">
+                    </form>
+                  <br>
+                  <p> 0-> neutral
+                    1->negative
+                    2->very negative
+                    3->positive
+                    4->very positive
+                  </p>
+                    <br>
+                   
+                    {{prediction_text}}
+                   
+                </div>
+                <div class="col">
+                   <div class="card card1">
+                    
+                   </div>
+                   <div class="card card2">
+                   
+                   </div>
+                   <div class="card card3">
+                   
+                   </div>
+                   <div class="card card4">
+                    
+                   </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
